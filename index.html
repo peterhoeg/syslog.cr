@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.26.0">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/chris-huxtable/syslog.cr">
+  <title>README - github.com/chris-huxtable/syslog.cr</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="github.com/chris-huxtable/syslog.cr/Syslog" data-name="syslog">
+      <a href="Syslog.html">Syslog</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/chris-huxtable/syslog.cr/Syslog/Facility" data-name="syslog::facility">
+      <a href="Syslog/Facility.html">Facility</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/chris-huxtable/syslog.cr/Syslog/Options" data-name="syslog::options">
+      <a href="Syslog/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/chris-huxtable/syslog.cr/Syslog/Priority" data-name="syslog::priority">
+      <a href="Syslog/Priority.html">Priority</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1>syslog.cr</h1>
+
+<p><a href="https://chris-huxtable.github.io/syslog.cr/" target="_blank"><img src="https://img.shields.io/badge/docs-available-brightgreen.svg" alt="Docs"/></a>
+<a href="https://github.com/chris-huxtable/syslog.cr/releases" target="_blank"><img src="https://img.shields.io/github/release/chris-huxtable/syslog.cr.svg" alt="GitHub release"/></a>
+<a href="https://travis-ci.org/chris-huxtable/syslog.cr" target="_blank"><img src="https://travis-ci.org/chris-huxtable/syslog.cr.svg?branch=master" alt="Build Status"/></a></p>
+
+<p>Adds syslog functionality to crystal via LibC bindings.</p>
+
+<h2>Installation</h2>
+
+<p>Add this to your application's <code>shard.yml</code>:</p>
+
+<pre><code class="language-yaml">dependencies:
+  syslog:
+    github: chris-huxtable/syslog.cr</code></pre>
+
+<h2>Usage</h2>
+
+<p>Requiring:</p>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;syslog&quot;</span></code></pre>
+
+<p>Basic Usage:</p>
+
+<pre><code class="language-crystal"><span class="t">Syslog</span>.emergency(<span class="s">&quot;This is a notice message&quot;</span>)
+<span class="t">Syslog</span>.alert(<span class="s">&quot;This is a notice message&quot;</span>)
+<span class="t">Syslog</span>.critical(<span class="s">&quot;This is a notice message&quot;</span>)
+<span class="t">Syslog</span>.error(<span class="s">&quot;This is a notice message&quot;</span>)
+<span class="t">Syslog</span>.warning(<span class="s">&quot;This is a notice message&quot;</span>)
+<span class="t">Syslog</span>.notice(<span class="s">&quot;This is a notice message&quot;</span>)
+<span class="t">Syslog</span>.info(<span class="s">&quot;This is a info message&quot;</span>)
+<span class="t">Syslog</span>.debug(<span class="s">&quot;This is a debug message&quot;</span>)</code></pre>
+
+<p>Facility Usage:</p>
+
+<pre><code class="language-crystal"><span class="t">Syslog</span>.info(<span class="s">&quot;This is a info message sent to the LOCAL0 Facility&quot;</span>, <span class="t">Syslog</span><span class="t">::</span><span class="t">Facility</span><span class="t">::</span><span class="t">Local0</span>)</code></pre>
+
+<h2>Contributing</h2>
+
+<ol><li>Fork it (&lt;https://github.com/chris-huxtable/syslog.cr/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
+
+<h2>Contributors</h2>
+
+<ul><li><a href="https://github.com/chris-huxtable" target="_blank">Chris Huxtable</a> - creator, maintainer</li></ul>
+</div>
+</body>
+</html>
